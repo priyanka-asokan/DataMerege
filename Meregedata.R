@@ -73,7 +73,6 @@ str(managers)
 
 
 
-
 new_managers_data <- read.csv("MoreData.csv")
 str(new_managers_data)
 
@@ -110,7 +109,7 @@ include_list
 
 # contains a summary of each row
 summary_col <- include_list$Q1 + include_list$Q2 + include_list$Q3 + include_list$Q4 
-              + include_list$Q5
++ include_list$Q5
 summary_col
 
 # Add summary_col to the end of the data frame
@@ -145,7 +144,7 @@ names(include_list)[11] <- "Answer total"
 # format when using Date data type
 
 #covert date structure for include_list data frame
-include_list$Date <- as.Date(include_list$Date, "%Y-%m-%d")
+include_list$Date <- as.Date(include_list$Date, "%m/%d/%Y")
 
 include_list
 
@@ -157,3 +156,11 @@ managers$Date <- as.Date(managers$Date, "%Y-%d-%m")
 managers
 
 new_managers <- rbind(managers, include_list)
+
+
+
+
+
+
+
+
